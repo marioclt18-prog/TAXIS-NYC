@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import plotly.graph_objects as go
 
-API_BASE_URL = "http://127.0.0.1:8000"
+API_BASE_URL = st.secrets.get("API_URL", "https://taxis-nyc-api-7sxs.onrender.com")
 
 st.title("📈 Pronóstico de Demanda con Incertidumbre")
 st.markdown("Consulta las predicciones horarias con intervalos de confianza cuantílicos ($p10$-$p90$).")
